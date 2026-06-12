@@ -1,0 +1,123 @@
+DAY-1 -  PYTHON SETUP & FUNDAMENTALS
+
+PROGRAM-1-WRITE A PROGRAM THAT TAKES YOUR NAME AND AGE AS INPUT AND PRINTS GREETING
+CODE-
+#Takes name and age as input
+name = input("enter your name: ")       
+age = int(input("enter your age: "))    
+#Print griting
+print("hello",(name),"!")             
+print("you are",(age),"years old.")
+OUTPUT-
+enter your name: Vandana
+enter your age: 21
+hello Vandana !
+you are 21 years old.
+
+PROGRAM-2-CREATE VARIABLE OF EACH DATA TYPE AND PRINT THEIR TYPES USING type()
+CODE-
+#Variable of different data type
+integer_num = 10      
+float_num = 3.14
+is_true = True
+text = "Vandana"
+#Print values and their type
+print(integer_num, type(integer_num))
+print(float_num, type(float_num))
+print(is_true, type(is_true))
+print(text, type(text))
+OUTPUT-
+10 <class 'int'>
+3.14 <class 'float'>
+True <class 'bool'>
+Vandana <class 'str'>
+
+PROGRAM-3-BUILD A SIMPLE CALCULATOR THAT ADDS,SUBTRACTS,MULTIPLIES AND DIVIDES TWO NUMBERS
+CODE-
+#Input two numbers
+num1 = float(input("enter first number: "))
+num2 = float(input("enter second number: "))
+perform operation(+,-,*,/)
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num23
+if num2 != 0:                   #check denominator = 0
+    division = num1 / num2
+else:
+    division = "Error: Division by zero is not allowed."
+#Print results
+print("Addition: ", (addition))
+print("Subtraction: ", (subtraction))
+print("Multiplication: ", (multiplication))
+print("Division: ", (division))
+OUTPUT-
+enter first number: 3.00
+enter second number: 4.00
+Addition:  7.0
+Subtraction:  -1.0
+Multiplication:  12.0
+
+PRACTICE SHEET
+PROGRAM-4-BMI CALCULATOR: INPUT HEIGHT & WEIGHT,OUTPUT BMI CATEGORY
+CODE-
+#Takes weight and height as input
+weight = float(input("enter your weight(in kg): "))
+height = float(input("enter your height(in m): "))
+#Calculate BMI
+bmi = weight/(height**2)
+#Display BMI
+print("your BMI is: ",round(bmi, 4))   
+#Determine BMI Category
+if bmi < 18.5:
+    print("Category: Underweight")
+elif bmi < 25:
+    print("Category: Normal weight")
+elif bmi < 30:
+    print("Category: Overweight")
+else: 
+     print("Category: Obese")
+OUTPUT-
+enter your weight(in kg): 50
+enter your height(in m): 1.50
+your BMI is:  22.2222
+Category: Normal weight
+Division:  0.75
+
+PROGRAM-5-TEMPERATURE CONVERTER: CELSIUS TO FAHRENHEIT AND FAHRENHEIT TO CELSIUS
+CODE-
+print("Temperature Converter")
+choice = int(input("enter your choice(1 for Celsius to Fahrenheit, 2 for Fahrenheit to Celsius): "))
+if choice == 1:
+    print("1. Celsius to Fahrenheit")
+    celsius = float(input("enter temperature in Celsius: "))
+    fahrenheit = (celsius * 9/5) + 32                            #Convert tempt celsius to fahrenheit
+    print("temperature in Fahrenheit is: ", round(fahrenheit, 2))
+elif choice == 2:
+    print("2. Fahrenheit to Celsius")
+    fahrenheit = float(input("enter temperature in Fahrenheit: "))
+    celsius = (fahrenheit - 32) * 5/9                         #Convert tempt fahrenheit to celsius
+    print("temperature in Celsius is: ", round(celsius, 2))
+else:
+    print("Invalid choice")
+OUTPUT-
+Temperature Converter                                          
+enter your choice(1 for Celsius to Fahrenheit, 2 for Fahrenheit to Celsius): 2
+2. Fahrenheit to Celsius                                            
+enter temperature in Fahrenheit: 98
+temperature in Celsius is:  36.67       
+
+PROGRAM-6-SIMPLE INTEREST CALCULATOR: P,R,T AS INPUTS
+CODE-
+#Input amount,rate and time
+P = float(input("Enter Principal Amount(P): "))
+R = float(input("Enter Rate of Interest(R): "))
+T = float(input("Enter Time in Years(T): "))
+#Calculate simple interest
+SI = (P * R * T) / 100
+#Display simple interest
+print("Simple Interest is:", SI)
+OUTPUT-
+Enter Principal Amount(P): 5000
+Enter Rate of Interest(R): 5
+Enter Time in Years(T): 5
+Simple Interest is: 1250.0
