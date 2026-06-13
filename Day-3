@@ -2,19 +2,115 @@ DAY-3-FUNCTIONS & MODULES
 
 PROGRAM-1-CREATE A FUNCTION THAT CHECKS IF A NUMBER IS A PALINDROME
 CODE-
+def is_palindrome(num):                 #Function to check whether a number is a palindrome
+    original = num
+    reversed_num = 0
+    while num > 0:
+        digit = num % 10
+        reversed_num = reversed_num * 10 + digit
+        num //= 10
+    return original == reversed_num
+number = int(input("enter a number: "))        #Takes number as input from user
+if is_palindrome(number):                       #Calling is_palindrome() function
+    print((number)," is a palindrome.")
+else:
+    print((number)," is not a palindrome.")
 OUTPUT-
+enter a number: 54545
+54545  is a palindrome.
+
+
 PROGRAM-2-WRITE A RECURSIVE FUNCTION FOR THE FIBONACCI SERIES
 CODE-
+def fibonacci(n):                 #Recursive function to generate Fibonacci series
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = int(input("Enter the number of terms: "))     #Takes no of terem as input from user
+print("Fibonacci sequence:")
+for i in range(n):
+    print(fibonacci(i))
 OUTPUT-
+Enter the number of terms: 10
+Fibonacci sequence:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+
+
 PROGRAM-3-BUILT A FUNCTION LIBRARY WITH 5 UTILITY MATH FUNCTIONS
 CODE-
+#
+def add(a,b):
+    return a + b
+def subtract(a,b):
+    return a - b
+def multiply(a,b):
+    return a * b
+def divide(a,b):
+    if b == 0:
+        return "Error: Division by zero is not allowed."
+    return a / b
+def cube(a):
+    return a ** 3
+m = float(input("Enter the first number: "))
+n = float(input("Enter the second number: "))
+print("Addition:", add(m, n))
+print("Subtraction:", subtract(m, n))
+print("Multiplication:", multiply(m, n))
+print("Division:", divide(m, n))
+print("Cube of first number:", cube(m))
+print("Cube of second number:", cube(n))
 OUTPUT-
+Enter the first number: -3
+Enter the second number: 5
+Addition: 2.0
+Subtraction: -8.0
+Multiplication: -15.0
+Division: -0.6
+Cube of first number: -27.0
+Cube of second number: 125.0
+
+
 PROGRAM-4-USE THE RANDOM MODULE TO BUILD A DICE-ROOL SIMULATOR
 CODE-
+import  random
+def roll_dice():
+    return random.randint(1,6)
+while True:
+    print("You rolled :", roll_dice())
+    choice = input("Roll again : ")
+    if choice != 'yes':
+        print("Thanks for playing!")
+        break
 OUTPUT-
+You rolled : 3
+Roll again : yes
+You rolled : 1
+Roll again : yes
+You rolled : 5
+Roll again : yes
+You rolled : 6
+Roll again : 0
+Thanks for playing!
+
+
 -----PRACTICE SHEET-----
+
 PROGRAM-5-MINIQUIZ APP : 5 QUESTION WITH SCORING
 CODE-
+
 OUTPUT-
 PROGRAM-6-PASSWORD GENERATOR USING RANDOM & STRING MODULES
 CODE-
