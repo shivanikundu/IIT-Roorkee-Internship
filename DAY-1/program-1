@@ -1,1 +1,15 @@
-er
+PROGRAM-1-WRITE A PROGRAM THAT TAKES YOUR NAME AND AGE AS INPUT AND PRINTS GREETING
+
+CODE-
+#Takes name and age as input
+name = input("enter your name: ")       
+age = int(input("enter your age: "))    
+#Print griting
+print("hello",(name),"!")             
+print("you are",(age),"years old.")
+
+OUTPUT-
+enter your name: Vandana
+enter your age: 21
+hello Vandana !
+you are 21 years old.
