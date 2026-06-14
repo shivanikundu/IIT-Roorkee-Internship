@@ -1,0 +1,18 @@
+from mathsfun import math_utility as f
+
+m = float(input("Enter first number : "))
+n = float(input("Enter second number : "))
+addition = f.add(m, n)
+print("ADDITION is", addition)
+subtraction = f.subtract(m, n)
+print("SUBTRACTION is", subtraction)
+multiplication = f.multiply(m, n)
+print("MULTIPLICATION is", multiplication)
+division = f.divide(m, n)
+print("DIVISION is", division)
+Cube_m = f.cube(m) 
+Cube_n = f.cube(n)
+print("CUBE of first number is: ", Cube_m)
+print("CUBE of second number is: ", Cube_n)
+gcd = f.gcd(m, n)
+print("GCD is", gcd)
