@@ -1,0 +1,5 @@
+Dictionaries : keys , value , item
+Dict methods : get , update , pop
+sets and sets operations
+String methods : split , join , strip , format , replace
+f-strings and format()
