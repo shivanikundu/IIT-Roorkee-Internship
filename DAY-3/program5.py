@@ -11,9 +11,9 @@ def quiz():
     score = 0
     
     for q, correct_answer in questions:
-        user_answer = input(q + " ").strip().lower()
+        user_answer = input(q + " ").strip().lower()     #.strip() is used to remove all leading and trailing whitespace characters(space,tabs newlines)from user answer
         
-        if user_answer == str(correct_answer).lower():
+        if user_answer == str(correct_answer).lower():   #str() is used to converts correct_answer to string representation
             print("Correct!")
             score += 1
         else:
