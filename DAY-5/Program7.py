@@ -5,7 +5,7 @@ def caesar_cipher(text , shift , mode) :
         shift = -shift
     for char in text :
          if char.isalpha() :
-            if char.isupper() :
+            if char.islower() :
                result += chr((ord(char) - ord('a') + shift) % 26 +ord('a'))
             else : 
                result += chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
