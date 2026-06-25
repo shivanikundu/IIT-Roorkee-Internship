@@ -1,0 +1,5 @@
+Handling missing values (fillna, dropna) 
+•   Encoding categorical variables (LabelEncoder, OneHotEncoder) 
+•   Feature scaling: StandardScaler, MinMaxScaler 
+•   Train-test split 
+•   Exploratory Data Analysis with Seaborn/Matplotlib 
